@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.spiderdt.common.dao.UrlsDao">
-    <resultMap id="urlsResultMap" type="com.spiderdt.common.entity.UrlsEntity"></resultMap>
+<mapper namespace="com.fivebit.dao.UrlsDao">
+    <resultMap id="urlsResultMap" type="com.fivebit.entity.UrlsEntity"></resultMap>
     <select id="getUrlInfoByCode" resultMap="urlsResultMap" parameterType="String">
         select * from shorturl.urls where code= #{code};
     </select>

@@ -1,4 +1,4 @@
-package com.spiderdt.common.tasks;
+package com.fivebit.tasks;
 
 import java.util.concurrent.TimeUnit;
 
@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
  * @author Kevin
  * @version V1.0
  * @Title:
- * @Package com.spiderdt.common.tasks
+ * @Package com.fivebit.tasks
  * @Description:
  * @date 2017/7/6 18:37
  */

@@ -1,6 +1,6 @@
-package com.spiderdt.common.tasks;
+package com.fivebit.tasks;
 
-import com.spiderdt.common.utils.Jlog;
+import com.fivebit.utils.Jlog;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author Kevin
  * @version V1.0
  * @Title:
- * @Package com.spiderdt.common.task
+ * @Package com.fivebit.task
  * @Description:
  * @date 2017/7/6 17:36
  */

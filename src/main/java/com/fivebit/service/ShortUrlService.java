@@ -1,15 +1,15 @@
-package com.spiderdt.common.service;
+package com.fivebit.service;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.spiderdt.common.components.Slog;
-import com.spiderdt.common.components.Sredis;
-import com.spiderdt.common.dao.UrlsDao;
-import com.spiderdt.common.entity.UrlsEntity;
-import com.spiderdt.common.filters.AppException;
-import com.spiderdt.common.tasks.TaskService;
-import com.spiderdt.common.utils.Constants;
-import com.spiderdt.common.utils.Utils;
+import com.fivebit.components.Slog;
+import com.fivebit.components.Sredis;
+import com.fivebit.dao.UrlsDao;
+import com.fivebit.entity.UrlsEntity;
+import com.fivebit.filters.AppException;
+import com.fivebit.tasks.TaskService;
+import com.fivebit.utils.Constants;
+import com.fivebit.utils.Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

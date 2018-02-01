@@ -1,4 +1,4 @@
-package com.spiderdt.common.utils;
+package com.fivebit.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,11 +1,11 @@
-package com.spiderdt.common.controller;
+package com.fivebit.controller;
 
-import com.spiderdt.common.components.Slog;
-import com.spiderdt.common.components.Sredis;
-import com.spiderdt.common.filters.AppException;
-import com.spiderdt.common.service.ShortUrlService;
-import com.spiderdt.common.utils.Constants;
-import com.spiderdt.common.utils.Utils;
+import com.fivebit.components.Slog;
+import com.fivebit.components.Sredis;
+import com.fivebit.filters.AppException;
+import com.fivebit.service.ShortUrlService;
+import com.fivebit.utils.Constants;
+import com.fivebit.utils.Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.annotation.QueryAnnotation;
 import org.springframework.http.HttpStatus;
@@ -36,7 +36,7 @@ public class ShortUrlController {
         }
         String org_url = shortUrlService.getOrgUrlByCode(code);
         if (org_url == null) {
-            throw new AppException("0", "cant find url by:" + code);
+            throw new AppException("0", "cant find surl-service by:" + code);
         }
         return ResponseEntity.status(HttpStatus.FOUND).location(URI.create(org_url)).build();
     }
@@ -48,13 +48,14 @@ public class ShortUrlController {
     }
 
     @GetMapping("/gen")
-    public ResponseEntity createShortUrlByGet(@RequestParam(value = "access_token", required = true) String access_token, @RequestParam(value = "url_long") List<String> urls_long) throws AppException {
+    public ResponseEntity createShortUrlByGet(@RequestParam(value = "access_token", required = true) String access_token,
+                                              @RequestParam(value = "url_long") List<String> urls_long ) throws AppException {
         slog.info("createShortUrlByGet ak :" + access_token + " urls:" + urls_long);
         if (access_token.equals(Constants.ACCESS_TOKEN) == false) {
             throw new AppException("0", "NO AUTH");
         }
         List<Map<String, String>> short_urls = shortUrlService.makeShortUrl(urls_long);
-        slog.info("create short url end:return:" + short_urls.toString());
+        slog.info("create short surl-service end:return:" + short_urls.toString());
         return ResponseEntity.ok(Utils.getRespons(short_urls));
     }
 

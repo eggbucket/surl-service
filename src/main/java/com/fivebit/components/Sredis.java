@@ -1,4 +1,4 @@
-package com.spiderdt.common.components;
+package com.fivebit.components;
 
 /**
  * Created by fivebit on 2017/6/30.

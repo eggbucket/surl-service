@@ -1,4 +1,4 @@
-package com.spiderdt.common.entity;
+package com.fivebit.entity;
 
 import java.io.Serializable;
 

@@ -21,22 +21,19 @@ spring:
   profiles: dev
   datasource:
       url: jdbc:postgresql://192.168.1.2:5432/ms
-      username: ms
-      password: spiderdt
+      username: xxx
+      password: xxxxxx
       driver-class-name: org.postgresql.Driver
-  boot:
-    admin:
-      url: http://192.168.1.5:9088
   redis:
     host: 192.168.1.2
     port: 6380
     database: 0
     timeout: 3000
     prefix: url
-    password: spiderdt
+    password: xxxxxx
 shorturl:
   incrkey: surl_index
-  http_prefix: 127.0.0.1:8905/s/
+  http_prefix: s.topzedu.com/
 
 server:
   tomcat:
@@ -46,33 +43,6 @@ server:
   connection-timeout: 5000
 ---
 #test 环境
-spring:
-  profiles: test
-  datasource:
-      url: jdbc:postgresql://192.168.1.5:5432/ms
-      username: ms
-      password: spiderdt
-      driver-class-name: org.postgresql.Driver
-  redis:
-    host: 127.0.0.1
-    port: 6380
-    database: 0
-    timeout: 3000
-    prefix: url
-    password: spiderdt
-  boot:
-    admin:
-      url: http://192.168.1.5:9088
-server:
-  tomcat:
-    max-threads: 100
-    min-spare-threads: 20
-  port: 8906
-  connection-timeout: 5000
-spiderdt:
-  rate: test
-
-
 
 ---
 #prod 环境
@@ -80,8 +50,8 @@ spring:
   profiles: prod
   datasource:
     url: jdbc:postgresql://127.0.0.1:5432/ms
-    username: ms
-    password: spiderdt
+    username: xxx
+    password: xxxxxx
     driver-class-name: org.postgresql.Driver
   redis:
     host: 127.0.0.1
@@ -89,51 +59,20 @@ spring:
     database: 0
     timeout: 3000
     prefix: url
-    password: spiderdt
+    password: xxxxxx
   boot:
     admin:
       url: http://192.168.1.5:9088
-
-server:
-  tomcat:
-    max-threads: 100
-    min-spare-threads: 20
-  port: 8906
-  connection-timeout: 5000
-
----
-#aws 环境
-spring:
-  profiles: aws
-  datasource:
-    url: jdbc:postgresql://172.31.5.139:6543/ms
-    username: ms
-    password: spiderdt
-    driver-class-name: org.postgresql.Driver
-  redis:
-    host: 172.31.5.139
-    port: 6380
-    database: 0
-    timeout: 3000
-    prefix: url
-    password: spiderdt
-  boot:
-    admin:
-      url: http://172.31.5.139:9088
-server:
-  tomcat:
-    max-threads: 100
-    min-spare-threads: 20
-  port: 8906
-  connection-timeout: 5000
-
 shorturl:
   incrkey: surl_index
-  http_prefix: spiderdt.cn/
+  http_prefix: s.topzedu.com/
 
-logging:
-  level: info
-  path: /data/tomcat/logs/
+server:
+  tomcat:
+    max-threads: 100
+    min-spare-threads: 20
+  port: 8906
+  connection-timeout: 5000
 
 ---
 #pub config
@@ -141,7 +80,7 @@ mybatis:
   mapper-locations: classpath:mapper/*Dao.xml
   config-location: classpath:mybatis/mybatis-config.xml
   executor-type: simple
-  type-aliases-package: com.spiderdt.common.entity
+  type-aliases-package: com.fivebit.entity
 
 #系统自带默认的tomcat,也可以使用jetty。需要配置jetty依赖。
 management:

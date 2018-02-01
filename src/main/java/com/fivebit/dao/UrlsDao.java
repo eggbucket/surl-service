@@ -1,6 +1,6 @@
-package com.spiderdt.common.dao;
+package com.fivebit.dao;
 
-import com.spiderdt.common.entity.UrlsEntity;
+import com.fivebit.entity.UrlsEntity;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 

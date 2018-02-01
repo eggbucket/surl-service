@@ -1,4 +1,4 @@
-package com.spiderdt.common.utils;
+package com.fivebit.utils;
 
 /**
  * Created by fivebit on 2017/7/12.
@@ -12,7 +12,7 @@ public class Constants {
 
     public static final Integer ENCODE_URL_BATCH_MAX= 50;
 
-    //url redis中失效的时间10天
+    //surl-service redis中失效的时间10天
     public static final Integer REDIS_URL_EXP = 864000;
     //保持长链接对应的短链，对一天内相同的长链，返回相同的短链
     public static final Integer REDIS_URL_SAME_EXP = 86400;

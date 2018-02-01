@@ -3,7 +3,7 @@
 	<!-- define attribute -->
 	<springProperty scope="context" name="logLevel" source="logging.level" defaultValue="DEBUG"/>
 	<springProperty scope="context" name="logDir" source="logging.path" defaultValue="/tmp/logs/"/>
-	<springProperty scope="context" name="logName" source="logging.name" defaultValue="shorturl"/>
+	<springProperty scope="context" name="logName" source="logging.name" defaultValue="shortsurl-service"/>
 
 	<appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
 		<layout class="ch.qos.logback.classic.PatternLayout">
@@ -59,7 +59,7 @@
 		</encoder> 	    
   	</appender>  	
   		
-	<logger name="com.spiderdt.common" additivity="false">
+	<logger name="com.fivebit" additivity="false">
 		<level value="${logLevel}" />
 		<appender-ref ref="infoAppender"/>
 		<appender-ref ref="errorAppender"/>

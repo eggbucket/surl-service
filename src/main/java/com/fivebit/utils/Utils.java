@@ -1,4 +1,4 @@
-package com.spiderdt.common.utils;
+package com.fivebit.utils;
 
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.stereotype.Repository;
